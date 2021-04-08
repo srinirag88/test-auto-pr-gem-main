@@ -8,7 +8,7 @@ gem 'aws-sdk-s3', '~> 1.84' # AWS S3 module, (aws-sdk v3) - Swapped with aws-sdk
 source "https://enterprise.contribsys.com/" do
   gem 'sidekiq-pro', '~> 4.0.2'
   gem 'sidekiq-ent', '~> 1.7.1'
-  gem 'sidekiq', '5.2.7'
+  gem 'sidekiq', '6.2.1'
 end
 
 gem 'unicorn', '5.4.0' #use unicorn as webserver
@@ -53,7 +53,7 @@ gem 'hellosign-ruby-sdk', '3.7.7' #used for i9s and other document signing
 gem 'integer-obfuscator', '0.1.0' # used for generating a "tax id" from an id in CIC+ EOY reporting
 gem 'pundit', '1.1.0' # Used for internal permissions
 gem 'uglifier', '3.0.0' #Ruby wrapper for UglifyJS JavaScript compressor. Used in production assets compression.
-gem 'quickbooks-ruby', '0.2.2' #qbo
+gem 'quickbooks-ruby', '0.6.6' #qbo
 gem 'xeroizer', '2.20.0' #xero
 gem 'stupidedi', '1.3.23' #used for aetna EDI
 gem 'plaid', '7.0.0' #plaid
