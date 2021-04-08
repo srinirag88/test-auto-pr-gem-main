@@ -5,11 +5,7 @@ gem 'rails-ujs' # Rails unobtrusive scripting adapter; this was moved into Rails
 
 gem 'aws-sdk-s3', '~> 1.84' # AWS S3 module, (aws-sdk v3) - Swapped with aws-sdk, as newest version will pull in ALL modules. If other modules needed, require those separately.
 
-source "https://enterprise.contribsys.com/" do
-  gem 'sidekiq-pro', '~> 4.0.2'
-  gem 'sidekiq-ent', '~> 1.7.1'
-  gem 'sidekiq', '6.2.1'
-end
+
 
 gem 'unicorn', '5.4.0' #use unicorn as webserver
 gem 'unicorn-rails', '2.2.1' #point `rails s` to unicorn
