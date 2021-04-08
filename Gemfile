@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '5.0.7.2'
 gem 'rails-ujs' # Rails unobtrusive scripting adapter; this was moved into Rails in 5.1 - it can be removed when we upgrade
 
-gem 'mimemagic', '~> 0.3.10'
+gem 'mimemagic', '~> 0.3.4'
 
 gem 'aws-sdk-s3', '~> 1.84' # AWS S3 module, (aws-sdk v3) - Swapped with aws-sdk, as newest version will pull in ALL modules. If other modules needed, require those separately.
 
