@@ -114,7 +114,7 @@ gem 'wisper', '2.0.0'
 
 # https://github.com/krisleech/wisper-sidekiq
 # Enables the use of sidekiq to asynchronously react to events published by Wisper
-gem 'wisper-sidekiq', '~> 1.0'
+gem 'wisper-sidekiq', '~> 1.3', '>= 1.3.0'
 
 # https://github.com/zendesk/zendesk_api_client_rb
 gem "zendesk_api", '~> 1.28'
@@ -209,10 +209,10 @@ gem "tzinfo-data", "1.2020.1"
 
 # Gem to track individual sidekiq job
 # https://github.com/utgarda/sidekiq-status
-gem 'sidekiq-status', "~> 1.1.4"
+gem 'sidekiq-status', '~> 1.1.4'
 
 gem 'ddtrace', '0.42.0'
 
-gem 'sidekiq-worker-killer', '~> 1.0'
+gem 'sidekiq-worker-killer', '~> 1.0', '>= 1.0.0'
 
 gem 'sendgrid-actionmailer', '3.1.1'
