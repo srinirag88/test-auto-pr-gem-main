@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.7.2'
-gem 'rails-ujs' # Rails unobtrusive scripting adapter; this was moved into Rails in 5.1 - it can be removed when we upgrade
+gem 'rails', '5.2.6.2'
+gem 'rails-ujs' , '>= 0.1.0' # Rails unobtrusive scripting adapter; this was moved into Rails in 5.1 - it can be removed when we upgrade
 
 gem 'mimemagic', '~> 0.3.4'
 
@@ -39,7 +39,7 @@ gem 'cityhash', '0.8.1' #for identitycache, On MacOS install with:   CXX=/usr/bi
 gem 'riif', '0.9.0' #quickbooks iif generation
 gem 'salesforce_bulk', :git => "https://github.com/justworkshr/salesforce_bulk.git"
 gem 'icalendar', '2.2.2' #used for ical integration
-gem 'react-rails', '~> 1.6.0' #removable after webpack introduced
+gem 'react-rails', '~> 1.6.2' #removable after webpack introduced
 gem 'jira-ruby', require: ['jira'] #make tickets in JIRA, used by compliance
 gem 'rufus-scheduler', '3.6.0 ' #the new crontab
 gem 'net-ssh', '5.2.0' #used to communicate with 3rd parties
@@ -75,9 +75,9 @@ gem 'posix-spawn' #for executing system commands without using fork()! no more o
 gem 'statsd-instrument', git: "https://github.com/justworkshr/statsd-instrument.git", branch: 'jw-2.9.2'
 gem 'rubyzip', ">= 1.3.0", require: 'zip' # Used for reading and writing zip files
 
-gem 'jquery-rails' #jquery bundle for rails - allows those horrible fake POST links and :remote => true - we should remove but cant yet
+gem 'jquery-rails' , '>= 4.4.0' #jquery bundle for rails - allows those horrible fake POST links and :remote => true - we should remove but cant yet
 
-gem 'sassc-rails' #sass
+gem 'sassc-rails' , '>= 1.3.0' #sass
 
 gem 'capistrano3-unicorn'
 
@@ -91,7 +91,7 @@ gem 'browser'
 
 # lograge for formatting ruby logs to put in elasticsearch via logstash
 # and make them searchable
-gem "lograge"
+gem "lograge", ">= 0.10.0"
 gem "logstash-event"
 
 # quickbase for interfacing with pfpg
@@ -124,13 +124,13 @@ gem "mime-types", "~> 3.3.1"
 
 group :development do
   # dev debugging tools
-  gem 'web-console', '3.0' #debugger
+  gem 'web-console', '3.0.0' #debugger
   gem 'letter_opener', '1.4.1'
 
   # dev performance tools
   gem 'stackprof' # ruby call profiler https://github.com/tmm1/stackprof
   gem 'flamegraph' # https://github.com/SamSaffron/flamegraph
-  gem 'graphql-playground'
+  gem 'graphql-playground', '>= 0.1.5'
 end
 
 group :development, :test do
@@ -148,10 +148,10 @@ group :development, :test do
   gem 'annotate', '~> 2.7.4' #provides annotation at top of files by running annotate
   gem 'timecop', '0.7.0' #allows us to simulate system time in tests
 
-  gem 'rspec-rails', '~> 3.8'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
   gem 'database_cleaner', '1.5.3' #Cleans database between mini test runs
-  gem 'rails-controller-testing'
-  gem 'meta_request', '>= 0.7.0' # Required in order to use rails panel https://github.com/dejan/rails_panel
+  gem 'rails-controller-testing', '>= 1.0.2'
+  gem 'meta_request', '>= 0.7.2' # Required in order to use rails panel https://github.com/dejan/rails_panel
 
   gem 'brakeman' #static analysis tool for security
   gem 'parallel_tests'
@@ -184,7 +184,7 @@ gem 'contentful', '~> 2.15.3'
 # https://github.com/rocketjob/iostreams
 gem 'iostreams', '1.0.0.beta7'
 
-gem 'graphiql-rails', group: :development
+gem 'graphiql-rails', '>= 1.7.0', group: :development
 
 gem "request_store", "~> 1.4"
 
