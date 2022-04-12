@@ -21,7 +21,7 @@ gem 'graphql-guard', '2.0.0' # field level auth for graphql
 gem 'bcrypt', '3.1.11' #for ActiveModel has_secure_password
 gem 'american_date', '1.1.0' #parses american dates like Date.parse('12/24/2014')
 gem 'rest-client', '~> 2.1.0'#used by Walrus and TokenClient to POST
-gem "nokogiri", '>= 1.10.10' #used to parse XML by Vertex, and Milliman
+gem "nokogiri", ">= 1.13.4" #used to parse XML by Vertex, and Milliman
 gem 'twilio-ruby', '~> 5.34.0' #used to send text messages for 2FA and other text messaging requiremments
 gem 'rmagick', '2.16.0' #used to do image uploads/cropping
 
@@ -39,7 +39,7 @@ gem 'cityhash', '0.8.1' #for identitycache, On MacOS install with:   CXX=/usr/bi
 gem 'riif', '0.9.0' #quickbooks iif generation
 gem 'salesforce_bulk', :git => "https://github.com/justworkshr/salesforce_bulk.git"
 gem 'icalendar', '2.2.2' #used for ical integration
-gem 'react-rails', '~> 1.6.0' #removable after webpack introduced
+gem 'react-rails', '~> 1.6.2' #removable after webpack introduced
 gem 'jira-ruby', require: ['jira'] #make tickets in JIRA, used by compliance
 gem 'rufus-scheduler', '3.6.0 ' #the new crontab
 gem 'net-ssh', '5.2.0' #used to communicate with 3rd parties
@@ -50,7 +50,7 @@ gem 'hellosign-ruby-sdk', '3.7.7' #used for i9s and other document signing
 gem 'integer-obfuscator', '0.1.0' # used for generating a "tax id" from an id in CIC+ EOY reporting
 gem 'pundit', '1.1.0' # Used for internal permissions
 gem 'uglifier', '3.0.0' #Ruby wrapper for UglifyJS JavaScript compressor. Used in production assets compression.
-gem 'quickbooks-ruby', '0.6.6' #qbo
+gem 'quickbooks-ruby', '0.2.2' #qbo
 gem 'xeroizer', '2.20.0' #xero
 gem 'stupidedi', '1.3.23' #used for aetna EDI
 gem 'plaid', '7.0.0' #plaid
@@ -124,7 +124,7 @@ gem "mime-types", "~> 3.3.1"
 
 group :development do
   # dev debugging tools
-  gem 'web-console', '3.0' #debugger
+  gem 'web-console', '3.0.0' #debugger
   gem 'letter_opener', '1.4.1'
 
   # dev performance tools
@@ -148,10 +148,10 @@ group :development, :test do
   gem 'annotate', '~> 2.7.4' #provides annotation at top of files by running annotate
   gem 'timecop', '0.7.0' #allows us to simulate system time in tests
 
-  gem 'rspec-rails', '~> 3.8'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
   gem 'database_cleaner', '1.5.3' #Cleans database between mini test runs
   gem 'rails-controller-testing'
-  gem 'meta_request', '>= 0.7.0' # Required in order to use rails panel https://github.com/dejan/rails_panel
+  gem 'meta_request', '>= 0.7.2' # Required in order to use rails panel https://github.com/dejan/rails_panel
 
   gem 'brakeman' #static analysis tool for security
   gem 'parallel_tests'
@@ -203,7 +203,7 @@ gem 'axlsx_styler', '1.0.0'
 
 gem "phonelib", "~> 0.6.43"
 
-gem "roo", "~> 2.8.0"
+gem "roo", "~> 2.8.3"
 
 gem "tzinfo-data", "1.2020.1"
 
