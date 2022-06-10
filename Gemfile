@@ -28,7 +28,7 @@ gem 'rmagick', '2.16.0' #used to do image uploads/cropping
 gem 'bluepill', '0.1.3' #bluepill
 gem 'gearman-ruby', '3.0.7', require: ['gearman', 'gearman/server'] #gearman
 gem 'dalli', '2.7.6' #memcached; if upgrading/removing, see config/initializers/dalli_request_errors.rb
-gem 'mechanize', '2.7.6' #used by ach processor and fedbank processor to programatically interact with websites
+gem 'mechanize', '2.8.5' #used by ach processor and fedbank processor to programatically interact with websites
 gem 'oauth', '0.4.7' #used by API to do oauth
 gem 'doorkeeper', '5.0.3' # used by APIs to handle oauth2 provider functionality
 gem 'doorkeeper-openid_connect', '1.6.3' # implements an openid connect authentication on top of doorkeeper gem
