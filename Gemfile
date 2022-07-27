@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.7.2'
+gem 'rails', '5.2.8.1'
 gem 'rails-ujs' # Rails unobtrusive scripting adapter; this was moved into Rails in 5.1 - it can be removed when we upgrade
 
 gem 'mimemagic', '~> 0.3.4'
@@ -39,7 +39,7 @@ gem 'cityhash', '0.8.1' #for identitycache, On MacOS install with:   CXX=/usr/bi
 gem 'riif', '0.9.0' #quickbooks iif generation
 gem 'salesforce_bulk', :git => "https://github.com/justworkshr/salesforce_bulk.git"
 gem 'icalendar', '2.2.2' #used for ical integration
-gem 'react-rails', '~> 1.6.0' #removable after webpack introduced
+gem 'react-rails', '~> 1.6.2' #removable after webpack introduced
 gem 'jira-ruby', require: ['jira'] #make tickets in JIRA, used by compliance
 gem 'rufus-scheduler', '3.6.0 ' #the new crontab
 gem 'net-ssh', '5.2.0' #used to communicate with 3rd parties
@@ -145,7 +145,7 @@ group :development, :test do
   gem 'pry', '0.10.3' # locking to prevent runtime issues
   gem 'pry-rails', '0.3.4' #removable possibly - dupe of byebug
   gem 'pry-byebug', '3.4.0' #debugger that responds to binding.pry and byebug
-  gem 'annotate', '~> 2.7.4' #provides annotation at top of files by running annotate
+  gem 'annotate', '~> 2.7.5' #provides annotation at top of files by running annotate
   gem 'timecop', '0.7.0' #allows us to simulate system time in tests
 
   gem 'rspec-rails', '~> 3.8'
