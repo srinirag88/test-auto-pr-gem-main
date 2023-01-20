@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.7.2'
+gem 'rails', '6.1.7.1'
 gem 'rails-ujs' # Rails unobtrusive scripting adapter; this was moved into Rails in 5.1 - it can be removed when we upgrade
 
 gem 'mimemagic', '~> 0.3.4'
@@ -39,7 +39,7 @@ gem 'cityhash', '0.8.1' #for identitycache, On MacOS install with:   CXX=/usr/bi
 gem 'riif', '0.9.0' #quickbooks iif generation
 gem 'salesforce_bulk', :git => "https://github.com/justworkshr/salesforce_bulk.git"
 gem 'icalendar', '2.2.2' #used for ical integration
-gem 'react-rails', '~> 1.6.0' #removable after webpack introduced
+gem 'react-rails', '~> 1.6.2' #removable after webpack introduced
 gem 'jira-ruby', require: ['jira'] #make tickets in JIRA, used by compliance
 gem 'rufus-scheduler', '3.6.0 ' #the new crontab
 gem 'net-ssh', '5.2.0' #used to communicate with 3rd parties
@@ -67,7 +67,7 @@ gem 'capistrano-rvm', '0.1.2'
 
 gem 'faye-websocket', '>= 0.11.0' #used by walrus
 
-gem 'paper_trail' #used to keep versioned history of bank_account and member
+gem 'paper_trail' , '>= 10.3.1' #used to keep versioned history of bank_account and member
 
 gem 'elasticsearch', '7.5.0'
 gem 'posix-spawn' #for executing system commands without using fork()! no more out of memory errors
@@ -114,7 +114,7 @@ gem 'wisper', '2.0.0'
 
 # https://github.com/krisleech/wisper-sidekiq
 # Enables the use of sidekiq to asynchronously react to events published by Wisper
-gem 'wisper-sidekiq', '~> 1.0'
+gem 'wisper-sidekiq', '~> 1.3', '>= 1.3.0'
 
 # https://github.com/zendesk/zendesk_api_client_rb
 gem "zendesk_api", '~> 1.28'
@@ -145,13 +145,13 @@ group :development, :test do
   gem 'pry', '0.10.3' # locking to prevent runtime issues
   gem 'pry-rails', '0.3.4' #removable possibly - dupe of byebug
   gem 'pry-byebug', '3.4.0' #debugger that responds to binding.pry and byebug
-  gem 'annotate', '~> 2.7.4' #provides annotation at top of files by running annotate
+  gem 'annotate', '~> 2.7.5' #provides annotation at top of files by running annotate
   gem 'timecop', '0.7.0' #allows us to simulate system time in tests
 
-  gem 'rspec-rails', '~> 3.8'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
   gem 'database_cleaner', '1.5.3' #Cleans database between mini test runs
-  gem 'rails-controller-testing'
-  gem 'meta_request', '>= 0.7.0' # Required in order to use rails panel https://github.com/dejan/rails_panel
+  gem 'rails-controller-testing', '>= 1.0.3'
+  gem 'meta_request', '>= 0.7.2' # Required in order to use rails panel https://github.com/dejan/rails_panel
 
   gem 'brakeman' #static analysis tool for security
   gem 'parallel_tests'
@@ -186,7 +186,7 @@ gem 'iostreams', '1.0.0.beta7'
 
 gem 'graphiql-rails', group: :development
 
-gem "request_store", "~> 1.4"
+gem "request_store", "~> 1.4", ">= 1.4.1"
 
 # for catching/retrying blocks of code (e.g. third-party api requests)
 gem 'retriable', '3.1.2'
@@ -209,10 +209,10 @@ gem "tzinfo-data", "1.2020.1"
 
 # Gem to track individual sidekiq job
 # https://github.com/utgarda/sidekiq-status
-gem 'sidekiq-status', "~> 1.1.4"
+gem 'sidekiq-status', '~> 1.1.4'
 
 gem 'ddtrace', '0.42.0'
 
-gem 'sidekiq-worker-killer', '~> 1.0'
+gem 'sidekiq-worker-killer', '~> 1.0', '>= 1.0.0'
 
 gem 'sendgrid-actionmailer', '3.1.1'
