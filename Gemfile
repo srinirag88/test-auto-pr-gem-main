@@ -54,7 +54,7 @@ gem 'quickbooks-ruby', '0.6.6' #qbo
 gem 'xeroizer', '2.20.0' #xero
 gem 'stupidedi', '1.3.23' #used for aetna EDI
 gem 'plaid', '7.0.0' #plaid
-gem 'ruby-pardot', '~> 1.3.0'  # Pardot gem for server integration
+gem 'ruby-pardot', '~> 1.4.3' # Pardot gem for server integration
 gem 'netsuite', '0.8.5' #API wrapper for Netsuite
 gem 'fixy', :git => "https://github.com/justworkshr/fixy.git", :tag => 'v0.4.2' # Generate fixed width flat files
 
