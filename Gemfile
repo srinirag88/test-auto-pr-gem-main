@@ -209,10 +209,10 @@ gem "tzinfo-data", "1.2020.1"
 
 # Gem to track individual sidekiq job
 # https://github.com/utgarda/sidekiq-status
-gem 'sidekiq-status', "~> 1.1.4"
+gem 'sidekiq-status', '~> 2.0.0'
 
 gem 'ddtrace', '0.42.0'
 
-gem 'sidekiq-worker-killer', '~> 1.0'
+gem 'sidekiq-worker-killer', '~> 1.0', '>= 1.0.1'
 
 gem 'sendgrid-actionmailer', '3.1.1'
