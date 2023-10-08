@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.7.2'
+gem 'rails', '7.1.0'
 gem 'rails-ujs' # Rails unobtrusive scripting adapter; this was moved into Rails in 5.1 - it can be removed when we upgrade
 
 gem 'mimemagic', '~> 0.3.4'
