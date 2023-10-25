@@ -151,7 +151,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'database_cleaner', '1.5.3' #Cleans database between mini test runs
   gem 'rails-controller-testing'
-  gem 'meta_request', '>= 0.7.0' # Required in order to use rails panel https://github.com/dejan/rails_panel
+  gem 'meta_request', '>= 0.7.3' # Required in order to use rails panel https://github.com/dejan/rails_panel
 
   gem 'brakeman' #static analysis tool for security
   gem 'parallel_tests'
