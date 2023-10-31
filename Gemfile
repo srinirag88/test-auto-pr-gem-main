@@ -23,7 +23,7 @@ gem 'american_date', '1.1.0' #parses american dates like Date.parse('12/24/2014'
 gem 'rest-client', '~> 2.1.0'#used by Walrus and TokenClient to POST
 gem "nokogiri", '>= 1.10.10' #used to parse XML by Vertex, and Milliman
 gem 'twilio-ruby', '~> 5.34.0' #used to send text messages for 2FA and other text messaging requiremments
-gem 'rmagick', '2.16.0' #used to do image uploads/cropping
+gem 'rmagick', '5.3.0' #used to do image uploads/cropping
 
 gem 'bluepill', '0.1.3' #bluepill
 gem 'gearman-ruby', '3.0.7', require: ['gearman', 'gearman/server'] #gearman
