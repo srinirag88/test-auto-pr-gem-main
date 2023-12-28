@@ -31,7 +31,7 @@ gem 'dalli', '2.7.6' #memcached; if upgrading/removing, see config/initializers/
 gem 'mechanize', '2.7.6' #used by ach processor and fedbank processor to programatically interact with websites
 gem 'oauth', '0.4.7' #used by API to do oauth
 gem 'doorkeeper', '5.0.3' # used by APIs to handle oauth2 provider functionality
-gem 'doorkeeper-openid_connect', '1.6.3' # implements an openid connect authentication on top of doorkeeper gem
+gem 'doorkeeper-openid_connect', '1.8.4' # implements an openid connect authentication on top of doorkeeper gem
 gem 'prawn', '0.13.2' #pdf writing used by tax document generation, employment verification letter etc.
 gem 'combine_pdf', '1.0.21' # used to easily split and combine pdfs
 gem 'identity_cache', '0.5.1' #caching library
