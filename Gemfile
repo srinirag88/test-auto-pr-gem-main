@@ -41,7 +41,7 @@ gem 'salesforce_bulk', :git => "https://github.com/justworkshr/salesforce_bulk.g
 gem 'icalendar', '2.2.2' #used for ical integration
 gem 'react-rails', '~> 1.6.0' #removable after webpack introduced
 gem 'jira-ruby', require: ['jira'] #make tickets in JIRA, used by compliance
-gem 'rufus-scheduler', '3.6.0 ' #the new crontab
+gem 'rufus-scheduler', '3.7.0' #the new crontab
 gem 'net-ssh', '5.2.0' #used to communicate with 3rd parties
 gem 'net-sftp','2.1.2' # used to talk to 3rd parties
 gem 'rotp', '3.0.1' # OTP gem for two factor auth. handles generating secret key and validating one time code based on key
