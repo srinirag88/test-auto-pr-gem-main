@@ -168,7 +168,7 @@ group :test do
 end
 
 group :development, :test, :staging, :sandbox do
-  gem 'factory_bot', '~> 4.10.0', require: false # factories for testing and preconfigs
+  gem 'factory_bot', '~> 6.5.1', require: false # factories for testing and preconfigs
 end
 
 gem 'google-api-client', require: 'google/apis/calendar_v3'#Used to add approved PTO requests to the client's google calendar.
