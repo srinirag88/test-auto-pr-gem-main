@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.7.2'
+gem 'rails', '7.0.0'
 gem 'rails-ujs' # Rails unobtrusive scripting adapter; this was moved into Rails in 5.1 - it can be removed when we upgrade
 
 gem 'mimemagic', '~> 0.3.4'
@@ -21,7 +21,7 @@ gem 'graphql-guard', '2.0.0' # field level auth for graphql
 gem 'bcrypt', '3.1.11' #for ActiveModel has_secure_password
 gem 'american_date', '1.1.0' #parses american dates like Date.parse('12/24/2014')
 gem 'rest-client', '~> 2.1.0'#used by Walrus and TokenClient to POST
-gem "nokogiri", '>= 1.10.10' #used to parse XML by Vertex, and Milliman
+gem "nokogiri", ">= 1.18.8" #used to parse XML by Vertex, and Milliman
 gem 'twilio-ruby', '~> 5.34.0' #used to send text messages for 2FA and other text messaging requiremments
 gem 'rmagick', '2.16.0' #used to do image uploads/cropping
 
@@ -39,7 +39,7 @@ gem 'cityhash', '0.8.1' #for identitycache, On MacOS install with:   CXX=/usr/bi
 gem 'riif', '0.9.0' #quickbooks iif generation
 gem 'salesforce_bulk', :git => "https://github.com/justworkshr/salesforce_bulk.git"
 gem 'icalendar', '2.2.2' #used for ical integration
-gem 'react-rails', '~> 1.6.0' #removable after webpack introduced
+gem 'react-rails', '~> 1.8.0' #removable after webpack introduced
 gem 'jira-ruby', require: ['jira'] #make tickets in JIRA, used by compliance
 gem 'rufus-scheduler', '3.6.0 ' #the new crontab
 gem 'net-ssh', '5.2.0' #used to communicate with 3rd parties
@@ -184,7 +184,7 @@ gem 'contentful', '~> 2.15.3'
 # https://github.com/rocketjob/iostreams
 gem 'iostreams', '1.0.0.beta7'
 
-gem 'graphiql-rails', group: :development
+gem 'graphiql-rails', '>= 1.10.0', group: :development
 
 gem "request_store", "~> 1.4"
 
