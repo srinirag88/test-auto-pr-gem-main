@@ -148,7 +148,7 @@ group :development, :test do
   gem 'annotate', '~> 2.7.4' #provides annotation at top of files by running annotate
   gem 'timecop', '0.7.0' #allows us to simulate system time in tests
 
-  gem 'rspec-rails', '~> 3.8'
+  gem 'rspec-rails', '~> 8.0', '>= 8.0.0'
   gem 'database_cleaner', '1.5.3' #Cleans database between mini test runs
   gem 'rails-controller-testing'
   gem 'meta_request', '>= 0.7.0' # Required in order to use rails panel https://github.com/dejan/rails_panel
