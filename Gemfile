@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.7.2'
+gem 'rails', '7.1.5.2'
 gem 'rails-ujs' # Rails unobtrusive scripting adapter; this was moved into Rails in 5.1 - it can be removed when we upgrade
 
 gem 'mimemagic', '~> 0.3.4'
@@ -34,12 +34,12 @@ gem 'doorkeeper', '5.0.3' # used by APIs to handle oauth2 provider functionality
 gem 'doorkeeper-openid_connect', '1.6.3' # implements an openid connect authentication on top of doorkeeper gem
 gem 'prawn', '0.13.2' #pdf writing used by tax document generation, employment verification letter etc.
 gem 'combine_pdf', '1.0.21' # used to easily split and combine pdfs
-gem 'identity_cache', '0.5.1' #caching library
+gem 'identity_cache', '1.0.0' #caching library
 gem 'cityhash', '0.8.1' #for identitycache, On MacOS install with:   CXX=/usr/bin/clang++ gem install cityhash
 gem 'riif', '0.9.0' #quickbooks iif generation
 gem 'salesforce_bulk', :git => "https://github.com/justworkshr/salesforce_bulk.git"
 gem 'icalendar', '2.2.2' #used for ical integration
-gem 'react-rails', '~> 1.6.0' #removable after webpack introduced
+gem 'react-rails', '~> 1.7.0' #removable after webpack introduced
 gem 'jira-ruby', require: ['jira'] #make tickets in JIRA, used by compliance
 gem 'rufus-scheduler', '3.6.0 ' #the new crontab
 gem 'net-ssh', '5.2.0' #used to communicate with 3rd parties
@@ -67,7 +67,7 @@ gem 'capistrano-rvm', '0.1.2'
 
 gem 'faye-websocket', '>= 0.11.0' #used by walrus
 
-gem 'paper_trail' #used to keep versioned history of bank_account and member
+gem 'paper_trail' , '>= 10.3.1' #used to keep versioned history of bank_account and member
 
 gem 'elasticsearch', '7.5.0'
 gem 'posix-spawn' #for executing system commands without using fork()! no more out of memory errors
@@ -85,7 +85,7 @@ gem 'geoip'
 gem 'useragent' # Used in Two-factor autentication (2FA) for parsing user agent strings to get browser and device information
 
 # makara gem for read-write from master/replicas
-gem 'makara'
+gem 'makara', '>= 0.4.1'
 gem 'pg'
 gem 'browser'
 
@@ -100,7 +100,7 @@ gem "logstash-event"
 # Used to compare PFPG data to our own to generate fraud alerts
 gem 'string-similarity'
 
-gem 'marginalia', '1.9.0' # Annotates SQL queries with controller/action/sidekiq job
+gem 'marginalia', '1.10.0' # Annotates SQL queries with controller/action/sidekiq job
 
 # https://github.com/Shopify/bootsnap
 gem 'bootsnap', require: false
@@ -145,7 +145,7 @@ group :development, :test do
   gem 'pry', '0.10.3' # locking to prevent runtime issues
   gem 'pry-rails', '0.3.4' #removable possibly - dupe of byebug
   gem 'pry-byebug', '3.4.0' #debugger that responds to binding.pry and byebug
-  gem 'annotate', '~> 2.7.4' #provides annotation at top of files by running annotate
+  gem 'annotate', '~> 3.2.0' #provides annotation at top of files by running annotate
   gem 'timecop', '0.7.0' #allows us to simulate system time in tests
 
   gem 'rspec-rails', '~> 3.8'
