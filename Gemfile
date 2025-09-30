@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.7.2'
+gem 'rails', '5.1.0'
 gem 'rails-ujs' # Rails unobtrusive scripting adapter; this was moved into Rails in 5.1 - it can be removed when we upgrade
 
 gem 'mimemagic', '~> 0.3.4'
@@ -30,8 +30,8 @@ gem 'gearman-ruby', '3.0.7', require: ['gearman', 'gearman/server'] #gearman
 gem 'dalli', '2.7.6' #memcached; if upgrading/removing, see config/initializers/dalli_request_errors.rb
 gem 'mechanize', '2.7.6' #used by ach processor and fedbank processor to programatically interact with websites
 gem 'oauth', '0.4.7' #used by API to do oauth
-gem 'doorkeeper', '5.0.3' # used by APIs to handle oauth2 provider functionality
-gem 'doorkeeper-openid_connect', '1.6.3' # implements an openid connect authentication on top of doorkeeper gem
+gem 'doorkeeper', '5.1.0' # used by APIs to handle oauth2 provider functionality
+gem 'doorkeeper-openid_connect', '1.7.0' # implements an openid connect authentication on top of doorkeeper gem
 gem 'prawn', '0.13.2' #pdf writing used by tax document generation, employment verification letter etc.
 gem 'combine_pdf', '1.0.21' # used to easily split and combine pdfs
 gem 'identity_cache', '0.5.1' #caching library
@@ -39,7 +39,7 @@ gem 'cityhash', '0.8.1' #for identitycache, On MacOS install with:   CXX=/usr/bi
 gem 'riif', '0.9.0' #quickbooks iif generation
 gem 'salesforce_bulk', :git => "https://github.com/justworkshr/salesforce_bulk.git"
 gem 'icalendar', '2.2.2' #used for ical integration
-gem 'react-rails', '~> 1.6.0' #removable after webpack introduced
+gem 'react-rails', '~> 1.7.0' #removable after webpack introduced
 gem 'jira-ruby', require: ['jira'] #make tickets in JIRA, used by compliance
 gem 'rufus-scheduler', '3.6.0 ' #the new crontab
 gem 'net-ssh', '5.2.0' #used to communicate with 3rd parties
@@ -55,7 +55,7 @@ gem 'xeroizer', '2.20.0' #xero
 gem 'stupidedi', '1.3.23' #used for aetna EDI
 gem 'plaid', '7.0.0' #plaid
 gem 'ruby-pardot', '~> 1.3.0'  # Pardot gem for server integration
-gem 'netsuite', '0.8.5' #API wrapper for Netsuite
+gem 'netsuite', '0.8.10' #API wrapper for Netsuite
 gem 'fixy', :git => "https://github.com/justworkshr/fixy.git", :tag => 'v0.4.2' # Generate fixed width flat files
 
 gem 'rollbar', '3.1.1' # exception reporting
@@ -67,7 +67,7 @@ gem 'capistrano-rvm', '0.1.2'
 
 gem 'faye-websocket', '>= 0.11.0' #used by walrus
 
-gem 'paper_trail' #used to keep versioned history of bank_account and member
+gem 'paper_trail' , '>= 10.1.0' #used to keep versioned history of bank_account and member
 
 gem 'elasticsearch', '7.5.0'
 gem 'posix-spawn' #for executing system commands without using fork()! no more out of memory errors
@@ -75,9 +75,9 @@ gem 'posix-spawn' #for executing system commands without using fork()! no more o
 gem 'statsd-instrument', git: "https://github.com/justworkshr/statsd-instrument.git", branch: 'jw-2.9.2'
 gem 'rubyzip', ">= 1.3.0", require: 'zip' # Used for reading and writing zip files
 
-gem 'jquery-rails' #jquery bundle for rails - allows those horrible fake POST links and :remote => true - we should remove but cant yet
+gem 'jquery-rails' , '>= 4.5.0' #jquery bundle for rails - allows those horrible fake POST links and :remote => true - we should remove but cant yet
 
-gem 'sassc-rails' #sass
+gem 'sassc-rails' , '>= 2.0.0' #sass
 
 gem 'capistrano3-unicorn'
 
@@ -91,7 +91,7 @@ gem 'browser'
 
 # lograge for formatting ruby logs to put in elasticsearch via logstash
 # and make them searchable
-gem "lograge"
+gem "lograge", ">= 0.11.0"
 gem "logstash-event"
 
 # quickbase for interfacing with pfpg
@@ -100,7 +100,7 @@ gem "logstash-event"
 # Used to compare PFPG data to our own to generate fraud alerts
 gem 'string-similarity'
 
-gem 'marginalia', '1.9.0' # Annotates SQL queries with controller/action/sidekiq job
+gem 'marginalia', '1.10.0' # Annotates SQL queries with controller/action/sidekiq job
 
 # https://github.com/Shopify/bootsnap
 gem 'bootsnap', require: false
@@ -124,7 +124,7 @@ gem "mime-types", "~> 3.3.1"
 
 group :development do
   # dev debugging tools
-  gem 'web-console', '3.0' #debugger
+  gem 'web-console', '3.1.1' #debugger
   gem 'letter_opener', '1.4.1'
 
   # dev performance tools
@@ -140,7 +140,7 @@ group :development, :test do
   gem 'rubocop-rspec', '1.35.0', require: false # Rubocop rules for RSpec tests
   gem 'rubocop-thread_safety', require: false # Rubocop plugin to check for patterns that are not thread safe.
   gem 'rubocop', '0.74.0', require: false
-  gem "rubocop-rails", require: false # Rubocop plugin to check for rails best practices
+  gem "rubocop-rails", ">= 2.3.2", require: false # Rubocop plugin to check for rails best practices
 
   gem 'pry', '0.10.3' # locking to prevent runtime issues
   gem 'pry-rails', '0.3.4' #removable possibly - dupe of byebug
@@ -148,10 +148,10 @@ group :development, :test do
   gem 'annotate', '~> 2.7.4' #provides annotation at top of files by running annotate
   gem 'timecop', '0.7.0' #allows us to simulate system time in tests
 
-  gem 'rspec-rails', '~> 3.8'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.3'
   gem 'database_cleaner', '1.5.3' #Cleans database between mini test runs
-  gem 'rails-controller-testing'
-  gem 'meta_request', '>= 0.7.0' # Required in order to use rails panel https://github.com/dejan/rails_panel
+  gem 'rails-controller-testing', '>= 1.0.3'
+  gem 'meta_request', '>= 0.7.3' # Required in order to use rails panel https://github.com/dejan/rails_panel
 
   gem 'brakeman' #static analysis tool for security
   gem 'parallel_tests'
@@ -184,9 +184,9 @@ gem 'contentful', '~> 2.15.3'
 # https://github.com/rocketjob/iostreams
 gem 'iostreams', '1.0.0.beta7'
 
-gem 'graphiql-rails', group: :development
+gem 'graphiql-rails', '>= 1.8.0', group: :development
 
-gem "request_store", "~> 1.4"
+gem "request_store", "~> 1.5", ">= 1.5.0"
 
 # for catching/retrying blocks of code (e.g. third-party api requests)
 gem 'retriable', '3.1.2'
@@ -196,7 +196,7 @@ gem 'retriable', '3.1.2'
 gem 'restforce', '~> 3.1.0'
 
 # Gem to generate XLSX (Excel) files, for COVID PPP Report
-gem 'caxlsx_rails', '0.6.2'
+gem 'caxlsx_rails', '0.6.3'
 
 # Gem to style excel files
 gem 'axlsx_styler', '1.0.0'
@@ -209,10 +209,10 @@ gem "tzinfo-data", "1.2020.1"
 
 # Gem to track individual sidekiq job
 # https://github.com/utgarda/sidekiq-status
-gem 'sidekiq-status', "~> 1.1.4"
+gem 'sidekiq-status', '~> 2.0.0'
 
 gem 'ddtrace', '0.42.0'
 
-gem 'sidekiq-worker-killer', '~> 1.0'
+gem 'sidekiq-worker-killer', '~> 1.0', '>= 1.0.1'
 
 gem 'sendgrid-actionmailer', '3.1.1'
