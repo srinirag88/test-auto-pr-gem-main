@@ -22,7 +22,7 @@ gem 'bcrypt', '3.1.11' #for ActiveModel has_secure_password
 gem 'american_date', '1.1.0' #parses american dates like Date.parse('12/24/2014')
 gem 'rest-client', '~> 2.1.0'#used by Walrus and TokenClient to POST
 gem "nokogiri", '>= 1.10.10' #used to parse XML by Vertex, and Milliman
-gem 'twilio-ruby', '~> 5.34.0' #used to send text messages for 2FA and other text messaging requiremments
+gem 'twilio-ruby', '~> 5.67.0' #used to send text messages for 2FA and other text messaging requiremments
 gem 'rmagick', '2.16.0' #used to do image uploads/cropping
 
 gem 'bluepill', '0.1.3' #bluepill
@@ -53,7 +53,7 @@ gem 'uglifier', '3.0.0' #Ruby wrapper for UglifyJS JavaScript compressor. Used i
 gem 'quickbooks-ruby', '0.6.6' #qbo
 gem 'xeroizer', '2.20.0' #xero
 gem 'stupidedi', '1.3.23' #used for aetna EDI
-gem 'plaid', '7.0.0' #plaid
+gem 'plaid', '14.0.0' #plaid
 gem 'ruby-pardot', '~> 1.3.0'  # Pardot gem for server integration
 gem 'netsuite', '0.8.5' #API wrapper for Netsuite
 gem 'fixy', :git => "https://github.com/justworkshr/fixy.git", :tag => 'v0.4.2' # Generate fixed width flat files
@@ -69,7 +69,7 @@ gem 'faye-websocket', '>= 0.11.0' #used by walrus
 
 gem 'paper_trail' #used to keep versioned history of bank_account and member
 
-gem 'elasticsearch', '7.5.0'
+gem 'elasticsearch', '7.17.10'
 gem 'posix-spawn' #for executing system commands without using fork()! no more out of memory errors
 
 gem 'statsd-instrument', git: "https://github.com/justworkshr/statsd-instrument.git", branch: 'jw-2.9.2'
@@ -106,7 +106,7 @@ gem 'marginalia', '1.9.0' # Annotates SQL queries with controller/action/sidekiq
 gem 'bootsnap', require: false
 
 # https://github.com/lostisland/faraday
-gem 'faraday', '<= 1.0'
+gem 'faraday', '~> 2.14', '>= 2.14.1'
 
 # https://github.com/krisleech/wisper
 # Provides an API to use the Publisher / Subscriber pattern
@@ -117,7 +117,7 @@ gem 'wisper', '2.0.0'
 gem 'wisper-sidekiq', '~> 1.0'
 
 # https://github.com/zendesk/zendesk_api_client_rb
-gem "zendesk_api", '~> 1.28'
+gem "zendesk_api", "~> 2.0", ">= 2.0.0"
 
 gem "json", "~> 2.3.1"
 gem "mime-types", "~> 3.3.1"
@@ -171,7 +171,7 @@ group :development, :test, :staging, :sandbox do
   gem 'factory_bot', '~> 4.10.0', require: false # factories for testing and preconfigs
 end
 
-gem 'google-api-client', require: 'google/apis/calendar_v3'#Used to add approved PTO requests to the client's google calendar.
+gem 'google-api-client', '>= 0.53.0', require: 'google/apis/calendar_v3' #Used to add approved PTO requests to the client's google calendar.
 
 gem "einhorn", "~> 0.7.4"
 gem "redis", "4.1.2"
@@ -193,7 +193,7 @@ gem 'retriable', '3.1.2'
 
 # Gem to integrate with Salesforce REST APIs
 # https://justworks.atlassian.net/wiki/spaces/Prod/pages/610306139/SalesForce+API+integration
-gem 'restforce', '~> 3.1.0'
+gem 'restforce', '~> 7.6.0'
 
 # Gem to generate XLSX (Excel) files, for COVID PPP Report
 gem 'caxlsx_rails', '0.6.2'
